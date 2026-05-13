@@ -15,8 +15,10 @@ Lightweight U-Net
 
 MNIST Trajectory Transport: Visualizing how the model "learns to move" pixels.
 
-This repository explores the geometric and dynamical differences between:$$v_\theta(x_t, t)$$
-and$$x_{1,\theta}(x_t, t)$$
+This repository explores the geometric and dynamical differences between:
+$$v_\theta(x_t, t)$$
+and
+$$x_{1,\theta}(x_t, t)$$
 
 Repository StructureThe project is organized into modular components to allow for easy experimentation with different architectures or datasets:Plaintext.
 ├── data.py           # MNIST loading, filtering, and preprocessing
