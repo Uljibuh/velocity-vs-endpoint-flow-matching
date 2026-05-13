@@ -32,8 +32,8 @@ The project is organized into modular components to allow for easy experimentati
 
 
 Plaintext.
-├── data.py           # MNIST loading, filtering, and preprocessing
 
+├── data.py           # MNIST loading, filtering, and preprocessing
 
 ├── models.py         # U-Net architecture and Time-Injection blocks
 
