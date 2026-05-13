@@ -6,10 +6,15 @@ x-prediction (endpoint prediction)
 
 Features
 Modular Architecture: Clean separation of data, models, and sampling logic.
+
 Linear Interpolation Flow Matching: Simple, interpretable transport paths.
+
 Euler ODE Sampling: Step-by-step integration from source to target.
-Lightweight U-Net: Optimized for CPU-based training (e.g., GitHub Codespaces).
+
+Lightweight U-Net
+
 MNIST Trajectory Transport: Visualizing how the model "learns to move" pixels.
+
 This repository explores the geometric and dynamical differences between:$$v_\theta(x_t, t)$$
 and$$x_{1,\theta}(x_t, t)$$
 
