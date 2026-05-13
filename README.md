@@ -90,17 +90,20 @@ Time Injection: Efficiently conditioning the model on the scalar $t$ through Lin
 
 Installation & Usage
 
-1. Clone and SetupSince this project is optimized for GitHub Codespaces, you can get started immediately in the cloud
-   :Bash
+Installation & Usage
+1. Clone and Setup
+Since this project is optimized for GitHub Codespaces, you can get started immediately in the cloud:
 
+Bash
 # Clone the repository
 gh repo clone Uljibuh/velocity-vs-endpoint-flow-matching
 cd velocity-vs-endpoint-flow-matching
 
 # Install dependencies
 pip install -r requirements.txt
-2. Run TrainingThe 
-train.py script will train both models sequentially and generate comparative plots:
+2. Run Training
+The train.py script will train both models sequentially and generate comparative plots:
+
 Bash
 python3 train.py
 
@@ -108,4 +111,3 @@ python3 train.py
 References & Inspiration
 Paper: Back to Basics: Let Denoising Generative Models Denoise
 
-Code Inspiration: JiT (Just-in-Time) Flow Matching
