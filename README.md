@@ -30,12 +30,19 @@ Repository Structure
 
 The project is organized into modular components to allow for easy experimentation with different architectures or datasets:
 .
+
 ├── data.py           # MNIST loading, filtering, and preprocessing
+
 ├── models.py         # U-Net architecture and Time-Injection blocks
+
 ├── sample.py         # ODE integration logic and matplotlib visualization
+
 ├── train.py          # Training loop, loss functions, and entry point
+
 ├── requirements.txt  # Project dependencies
+
 ├── .gitignore        # Prevents tracking data/ and __pycache__/
+
 └── README.md
 
 
@@ -52,7 +59,9 @@ v-Prediction
 
 The true velocity of the interpolation path is $\frac{dx_t}{dt} = x_1 - x_0$. 
 
-The model learns to predict this velocity directly:$$\mathcal{L}_v = \|v_\theta(x_t,t) - (x_1-x_0)\|^2$$Sampling: $x_{t+\Delta t} = x_t + v_\theta(x_t,t)\Delta t$. This is generally stable as no singularity exists near $t=1$.x-PredictionThe model predicts the clean endpoint $x_1$ directly:
+The model learns to predict this velocity directly:$$\mathcal{L}_v = \|v_\theta(x_t,t) - (x_1-x_0)\|^2$$
+
+Sampling: $x_{t+\Delta t} = x_t + v_\theta(x_t,t)\Delta t$. This is generally stable as no singularity exists near $t=1$.x-PredictionThe model predicts the clean endpoint $x_1$ directly:
 
 $$\mathcal{L}_x = \|x_{1,\theta}(x_t,t)-x_1\|^2$$
 
