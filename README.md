@@ -88,6 +88,12 @@ Skip Connections: Directly passing high-resolution information to the decoder, c
 
 Time Injection: Efficiently conditioning the model on the scalar $t$ through Linear-SiLU layers.
 
+
+
+Result
+
+<img width="1353" height="890" alt="image" src="https://github.com/user-attachments/assets/88ddc210-126a-4d69-bafe-f462f2336638" />
+
 References & Inspiration
 Paper: Back to Basics: Let Denoising Generative Models Denoise
 
