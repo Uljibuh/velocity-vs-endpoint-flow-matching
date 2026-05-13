@@ -59,7 +59,9 @@ v-Prediction
 
 The true velocity of the interpolation path is $\frac{dx_t}{dt} = x_1 - x_0$. 
 
-The model learns to predict this velocity directly:$$\mathcal{L}_v = \|v_\theta(x_t,t) - (x_1-x_0)\|^2$$
+The model learns to predict this velocity directly:
+
+$$\mathcal{L}_v = \|v_\theta(x_t,t) - (x_1-x_0)\|^2$$
 
 Sampling: $x_{t+\Delta t} = x_t + v_\theta(x_t,t)\Delta t$. This is generally stable as no singularity exists near $t=1$.x-PredictionThe model predicts the clean endpoint $x_1$ directly:
 
