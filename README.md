@@ -33,11 +33,22 @@ The project is organized into modular components to allow for easy experimentati
 
 Plaintext.
 ├── data.py           # MNIST loading, filtering, and preprocessing
+
+
 ├── models.py         # U-Net architecture and Time-Injection blocks
+
+
 ├── sample.py         # ODE integration logic and matplotlib visualization
+
+
 ├── train.py          # Training loop, loss functions, and entry point
+
+
 ├── requirements.txt  # Project dependencies
+
+
 ├── .gitignore        # Prevents tracking data/ and __pycache__/
+
 └── README.md
 
 Theoretical Background
