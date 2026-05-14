@@ -5,6 +5,7 @@ v-prediction (velocity prediction)
 x-prediction (endpoint prediction)
 
 Features
+
 Modular Architecture: Clean separation of data, models, and sampling logic.
 
 Linear Interpolation Flow Matching: Simple, interpretable transport paths.
@@ -29,7 +30,7 @@ $$x_{1,\theta}(x_t, t)$$
 Repository Structure
 
 The project is organized into modular components to allow for easy experimentation with different architectures or datasets:
-.
+
 
 ├── data.py           # MNIST loading, filtering, and preprocessing
 
@@ -63,7 +64,11 @@ The model learns to predict this velocity directly:
 
 $$\mathcal{L}_v = \|v_\theta(x_t,t) - (x_1-x_0)\|^2$$
 
-Sampling: $x_{t+\Delta t} = x_t + v_\theta(x_t,t)\Delta t$. This is generally stable as no singularity exists near $t=1$.x-PredictionThe model predicts the clean endpoint $x_1$ directly:
+Sampling: $x_{t+\Delta t} = x_t + v_\theta(x_t,t)\Delta t$. This is generally stable as no singularity exists near $t=1$.
+
+x-Prediction
+
+The model predicts the clean endpoint $x_1$ directly:
 
 $$\mathcal{L}_x = \|x_{1,\theta}(x_t,t)-x_1\|^2$$
 
@@ -80,7 +85,8 @@ Instability: High sensitivity to noise near the target.
 
 Clamping: We use torch.clamp(1 - t, min=1e-3) to prevent NaNs, though this introduces a slight bias in the final transport steps.
 
-Why U-Net?Unlike shallow CNNs, the U-Net architecture significantly outperforms in flow matching due to:
+Why U-Net?
+Unlike shallow CNNs, the U-Net architecture significantly outperforms in flow matching due to:
 
 Hierarchical Features: Capturing both global digit structure and local pixel details.
 
